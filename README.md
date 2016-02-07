@@ -10,12 +10,12 @@ Type the following commands
 
     # Install my repo
     git clone https://github.com/carguel/my-new-vim-dotfiles ~/.vim
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ln -s ~/.vim/gvimrc ~/.gvimrc
+    echo 'source $HOME/.vim/vimrc' > $HOME/.vimrc
+    echo 'source $HOME/.vim/vimrc' > $HOME/.gvimrc
     cd ~/.vim
 
     # Install Vundle
-    git clone https://github.com/VundleVim/Vundle.vim.git
+    git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
 
     # Install plugins managed by vundle.
     vim -c 'PluginInstall' -c "qa"

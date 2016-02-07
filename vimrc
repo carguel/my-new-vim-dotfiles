@@ -23,9 +23,11 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-commentary' 
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,10 +56,10 @@ nmap <C-left> :tabN<CR>
 
 " Close buffer
 nmap <leader>d :bprevious<CR>:bdelete #<CR>
- 
+
 " Close all buffers
 nmap <leader>D :bufdo bd<CR>
- 
+
 " Switch between last two buffers
 nnoremap <leader><leader> <C-^>
 
@@ -68,6 +70,9 @@ highlight Pmenu ctermbg=238 gui=bold
 colorscheme solarized
 
 " Configure Airline
+let g:airline_theme = 'solarized'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 set statusline+=%#warningmsg#
@@ -103,3 +108,4 @@ nnoremap <Leader>r :lr
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
