@@ -20,7 +20,13 @@ Type the following commands
     # Install plugins managed by vundle.
     vim -c 'PluginInstall' -c "qa"
 
+## Prettify vim display
 
+If you want to enable airline with powerline and solarized color scheme, append the following line to $HOME/.vimrc
 
+    source $HOME/.vim/prettify.vimrc
 
+Depending on the terminal you use, you may also set the following environment variable:
+
+    export TERM=xterm-256color
 
